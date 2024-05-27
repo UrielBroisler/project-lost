@@ -1,0 +1,14 @@
+{
+    "name": "lostwood",
+    "version": "1.0.0",
+    "description": "lostwood",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "dependencia-1": "versao",
+      "dependencia-2": "versao"
+    }
+  }
+  
