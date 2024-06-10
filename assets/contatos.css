@@ -1,0 +1,377 @@
+/* reset css para remover margens, preenchimentos e garantir a caixa de modelo de borda-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins' sans-serif;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --text-color: #fff;
+  --bg-color: #fff;
+  --main-color: #4E6648;
+
+  --h1-font: 6rem;
+  --h2-font: 3rem;
+  --p-font: 1rem;
+
+}
+
+/* definição da altura do html */
+html {
+  height: 260vh;
+}
+
+/* estilo para o container, limitando sua largura máxima e centralizando na página */
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+/* estilos para o layout flexível */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* estilos para o cabeçalho */
+header {
+  width: 100%;
+  padding: 60px 4%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 13px;
+  z-index: 10;
+  /* garante que o cabeçalho esteja na frente de outros elementos */
+  transition: 1s;
+}
+
+/* estilos para o cabeçalho quando está rolando */
+header.rolagem {
+  background: #ffffff;
+  /* cor de fundo alterada para branco */
+  padding: 20px 4%;
+  border-radius: 7px;
+}
+
+/* estilos para os links no cabeçalho quando está rolando */
+header.rolagem a {
+  color: #4E6648;
+  transition: all .50s ease;
+}
+
+header.rolagem a:hover {
+  color: black;
+  transform: translateY(-3px);
+}
+
+header.rolagem img {
+  filter: invert(36%) sepia(7%) saturate(1628%) hue-rotate(62deg) brightness(96%) contrast(87%);
+}
+
+/* estilos para o logotipo no cabeçalho */
+header img {
+  font-size: 40px;
+  z-index: 11;
+  /* garante que o logotipo esteja na frente de outros elementos */
+}
+
+/* estilos para a lista de navegação no cabeçalho */
+header ul {
+  list-style-type: none;
+  margin-top: 13px;
+}
+
+/* estilos para os itens da lista de navegação no cabeçalho */
+header ul li {
+  display: inline-block;
+  margin: 0 40px;
+}
+
+/* estilos para os links na lista de navegação do cabeçalho */
+header ul li a {
+  color: white;
+  text-decoration: none;
+  transition: all .50s ease;
+}
+
+header ul li a:hover {
+  color: var(--main-color);
+  transform: translateY(-3px);
+}
+
+/* estilos para o botão de inscrição no cabeçalho */
+.btn-signup a {
+  text-decoration: none;
+  color: white;
+  transition: all .50s ease;
+}
+
+.btn-signup a:hover {
+  color: var(--main-color);
+  transform: translateY(-3px);
+}
+
+.btn-signup {
+  font-weight: normal;
+  font-weight: bold;
+}
+
+.btn-signup button {
+  width: 120px;
+  height: 40px;
+  font-weight: bold;
+  border: 0;
+  background: linear-gradient(165deg, rgba(78, 102, 72, 1) 0%, rgba(28, 53, 22, 1) 100%);
+  color: #ffffff;
+  cursor: pointer;
+  transition: .2s;
+  margin: 10px;
+  border-radius: 7px;
+  transition: all .50s ease;
+}
+
+.btn-signup button:hover {
+  color: #4E6648;
+  transform: translateY(-3px);
+}
+
+/* estilos para a seção de banner */
+.banner {
+  position: relative;
+  /* define a posição relativa para os elementos filhos */
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(img/contatar.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  /* define um índice de empilhamento menor para a seção do banner */
+}
+
+/* estilos para o SVG na seção de banner */
+.banner svg {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  fill: #ffffff;
+}
+
+/* estilos para o título no banner */
+.banner h1 {
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 42px;
+}
+
+/* estilos para o parágrafo no banner */
+.banner p {
+  color: #ffffff;
+  margin-top: 20px;
+  max-width: 42%;
+  /* largura máxima do parágrafo */
+  text-align: center;
+  /* centralizar texto */
+  font-weight: lighter;
+  font-size: 19px;
+}
+
+.heading1 {
+  margin-top: 35px;
+  background: linear-gradient(165deg, rgba(78, 102, 72, 1) 0%, rgba(28, 53, 22, 1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 10rem;
+  font-weight: bold;
+  font-size: 40px;
+  padding: 20px;
+}
+
+
+
+.section-2 {
+  margin-top: 20rem;
+}
+
+
+.btn-light {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+}
+
+.btn-entrar {
+  transition: background-color 0.7s, border-color 0.7s;
+  font-weight: 600;
+}
+
+.form-label {
+  color: white;
+}
+
+.first_col {
+  background: linear-gradient(to top left, #1C3516, #4E6648);
+  height: 550px;
+  position: relative;
+  width: 550px;
+  left: 155px;
+  top: 171px;
+  border-radius: 7px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.img-fluid {
+  border-radius: 7px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.last_row {
+  width: 60% !important;
+  position: relative !important;
+  left: 350px;
+  top: 50px;
+  height: 200px;
+  padding-bottom: 100px !important;
+  background: linear-gradient(to top left, #1C3516, #4E6648);
+  border-radius: 7px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background-color: #c1b688;
+  border: #c1b688;
+}
+
+.btn-primary:hover {
+  background-color: #afa57c;
+}
+
+.form-control {
+  height: 52px;
+  background-color: #fff;
+  font-size: 14px;
+  border-radius: 7px;
+  box-shadow: none !important;
+  border: 1px solid #555;
+}
+
+.form-control[type=text]:focus {
+  border: 2px solid #363C34;
+}
+
+.text-center {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.col h4 {
+  font-weight: bold;
+
+}
+
+
+
+.card-body {
+  margin-bottom: 30px;
+}
+
+
+.card-body h4 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.card-body p {
+  text-align: center;
+  font-weight: lighter;
+  padding: 40px;
+  font-size: 15px;
+}
+
+.card-body a {
+  margin-left: 17px;
+  padding: 6px;
+  border-radius: 7px;
+  text-decoration: none;
+  color: #4E6648;
+  transition: all .45s ease-in;
+  border: 1px solid #4E6648;
+  box-shadow: 0px 6px 12px -12px rgba(0, 0, 0, 0.75);
+}
+
+.card-body a:hover {
+
+  background: #4E6648;
+  color: #fff;
+}
+
+
+.home-newsletter {
+  padding: 80px 0;
+  background: #363C34;
+  border-radius: 7px;
+}
+
+.home-newsletter .single {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.home-newsletter .single h2 {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.home-newsletter .single .form-control {
+  height: 50px;
+  width: 400px;
+  padding: 20px;
+  border-color: transparent;
+  border-radius: 7px 0 0 7px;
+}
+
+.home-newsletter .single .form-control:focus {
+  box-shadow: none;
+  border-color: #243c4f;
+}
+
+.home-newsletter .single .btn {
+  min-height: 50px;
+  border-radius: 0 7px 7px 0;
+  background: linear-gradient(165deg, rgba(78, 102, 72, 1) 0%, rgba(28, 53, 22, 1) 100%);
+  color: #fff;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  margin-top: 25rem;
+}
+
+.footer img {
+  filter: invert(0%) sepia(3%) saturate(0%) hue-rotate(24deg) brightness(10%) contrast(100%);
+  justify-content: center;
+  margin-top: 40px;
+}

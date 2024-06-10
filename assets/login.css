@@ -1,0 +1,109 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to top left, #1C3516, #4E6648);
+}
+
+.login-box {
+  background-color: #4E6648;    
+  border-radius: 7px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 344px;
+  max-height: 600px;
+}
+
+.form-control::placeholder {
+  color: #ccc;
+}
+
+.form-control {
+  padding: 10px; /* Ajusta padding dos campos de entrada */
+  font-size: 1rem; /* Ajusta o tamanho da fonte dos campos de entrada */
+}
+
+button {
+  font-weight: bold;
+}
+
+
+
+.text-white {
+  color: #fff !important;
+  font-size: small;
+}
+
+.btn-light {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+}
+
+
+.forgot-password {
+  text-decoration: none;
+  position: relative;
+  bottom: 1px;
+}
+
+.forgot-password:hover,
+.forgot-password:focus {
+  color: white;
+  cursor: pointer;
+  text-decoration: underline; 
+}
+
+
+.btn-entrar {
+  transition: background-color 0.7s, border-color 0.7s;
+  font-weight: bold;
+}
+
+.btn-entrar:hover,
+.btn-entrar:focus {
+    background-color: white;
+    color: black
+}
+
+
+.custom-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-checkbox + label {
+  position: relative;
+  cursor: pointer;
+  right: 10px ;
+}
+
+.custom-checkbox + label::before {
+  content: '';
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid #fff;
+  border-radius: 3px;
+  background: transparent;
+  transition: background 0.3s, border-color 0.3s;
+  right: 7rem;
+}
+
+.custom-checkbox:checked + label::after {
+  content: '';
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 1px 1px 0;
+  right: 7.35rem;
+}
+
