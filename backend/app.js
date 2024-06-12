@@ -20,7 +20,6 @@ app.use(cors({origin: process.env.CLIENT_ORIGIN_URL}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-console.log(path.join(__dirname, '..', 'assets'))
 app.use('/assets', express.static(path.join(__dirname, '..', 'assets')));
 
 app.get('/', (req, res) => {
@@ -53,4 +52,6 @@ app.use('/api/clientes', clientesRouter);
 // app.use('/api/ingressos', ingressosRouter);
 // app.use('/api/pedidos', pedidosRouter);
 
-app.listen(8000);
+app.listen(8000, () => {
+  console.log("Servidor rodando no endereco http://localhost:8000")
+});
