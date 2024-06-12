@@ -1,7 +1,7 @@
 const {Prisma} = require('@prisma/client');
 
 function exceptionHandler(e, response){
-  console.log();
+  console.error(e);
     let error = {
       code : 500,
       message : "Internal Server Error"

@@ -38,7 +38,6 @@ router.post('/' , async (req, res) => {
         nome: true,
         email: true
       }
-
     });
     const jwt = generateAccessToken(cliente);
     cliente.accessToken = jwt;
