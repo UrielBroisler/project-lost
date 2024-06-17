@@ -1,8 +1,5 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// schema.prisma
 
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 generator client {
   provider = "prisma-client-js"
 }
@@ -13,43 +10,29 @@ datasource db {
 }
 
 model Cliente {
-  id         Int      @id @default(autoincrement())
-  nome       String
-  cpf        BigInt
-  telefone   BigInt
-  email      String
-  nascimento DateTime?
-  password  String
-  Pedido     Pedido[]
+  id             Int      @id @default(autoincrement())
+  nome           String   @db.VarChar(100)
+  email          String   @unique @db.VarChar(100)
+  telefone       String?  @db.VarChar(11)
+  datanascimento DateTime?
+  cpf            String   @unique @db.VarChar(11)
+  senha          String   @db.VarChar(255)
 }
 
 model Funcionario {
-  id         Int      @id @default(autoincrement())
-  nome       String
-  cpf        BigInt
-  telefone   BigInt?
-  email      String
-  nascimento DateTime
-   password  String
-
+  id             Int      @id @default(autoincrement())
+  nome           String   @db.VarChar(100)
+  email          String   @unique @db.VarChar(100)
+  telefone       String?  @db.VarChar(11)
+  datanascimento DateTime?
+  cpf            String   @unique @db.VarChar(11)
+  senha          String   @db.VarChar(255)
+  cargo          String   @db.VarChar(50)
 }
 
 model Ingresso {
-  id     Int      @id @default(autoincrement())
-  ingresso_disponivel BigInt
-  data DateTime
-  preco  Decimal
-  Pedido Pedido[]
-}
-
-model Pedido {
-  id            Int      @id @default(autoincrement())
-  data          DateTime @default(now())
-  valorPago     Decimal
-  ingressoUsado BigInt
-  ingressoTipo  String
-  ingresso      Ingresso @relation(fields: [ingressoId], references: [id])
-  ingressoId  Int
-  cliente       Cliente  @relation(fields: [clienteId], references: [id])
-  clienteId     Int
+  id            Int     @id @default(autoincrement())
+  nome          String  @db.VarChar(100)
+  valor         Decimal @db.Decimal(10, 2)
+  tipo_ingresso String  @db.VarChar(50)
 }

@@ -106,3 +106,9 @@ button {
   right: 7.35rem;
 }
 
+#error-message {
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
